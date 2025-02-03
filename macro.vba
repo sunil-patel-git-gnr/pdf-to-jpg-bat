@@ -42,7 +42,10 @@ Sub MailMergeToPdfBasic()
          
 
         ' Save as PDF using SaveAs2
-       
+        singleDoc.SaveAs2 _
+            fileName:=filePath & "\" & fileName, _
+            FileFormat:=wdFormatPDF, _
+            CompatibilityMode:=15
 
         ' Close the document without saving
         singleDoc.Close False
